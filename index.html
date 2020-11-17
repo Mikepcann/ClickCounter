@@ -8,18 +8,24 @@
                 width: 800px;
                 display: block;
             }
-            #decrease, #increase {
+            #decrease, #increase, #reset {
                 width:25%;
                 height: 50px;
                 border-radius: 25px;
                 background-color: #B28DFF;
                 font-size: x-large;
                 border: none;  
+                
             }
             span {
                 padding-left: 5%;
                 padding-right: 5%;
                 font-size: x-large;
+            }
+            #newButton {
+                padding-top: 25px;
+                margin: auto;
+                margin-left: 100px
             }
         </style>
     </head>
@@ -34,32 +40,13 @@
 
     <div id="tainer">
         <input type="button" id="decrease" value="-1"> 
-        <span id="counter">0</span>
+        <span id="counter"></span>
         <input type="button" id="increase" value="+1">
     </div>
+    <div id="newButton">
+        <input type="button" id="reset" value="Reset Counter">
+    </div>
     
-        <script type="text/javascript">
-            //declaring the staring point of the count
-            let x = 0;
-
-            //Allowing the count to decrease by one
-            function downCount(){
-                let down = document.getElementById("counter");
-                down.innerHTML= x -= 1;
-            };
-            //Allowing the count to increase by one
-            function upCount(){
-                let up = document.getElementById("counter");
-                up.innerHTML= x += 1;
-            };
-            //connecting the downCount() to the decrease button
-            document.getElementById("decrease").onclick=function(){
-                downCount();
-            };
-            //connecting the upCount() to the increase button
-            document.getElementById("increase").onclick=function(){
-                upCount();
-            };
-        </script>
+        <script src="clickcounter.js" type="text/javascript"></script>
     </body>
 </html>
