@@ -25,7 +25,17 @@
             #newButton {
                 padding-top: 25px;
                 margin: auto;
-                margin-left: 100px
+                margin-left: 100px;
+            }
+
+            .dropDown {
+               width: 20%;
+               height: 50px;
+               background-color:  #B28DFF;
+               font-size: x-large;
+               border: none;
+               border-radius: 25px;
+               padding: 10px;
             }
         </style>
     </head>
@@ -45,6 +55,17 @@
     </div>
     <div id="newButton">
         <input type="button" id="reset" value="Reset Counter">
+        <br>
+        <span>Count Value</span>
+        <form>
+            <select id="value" class="dropDown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </form>  
+        <button type="button"id="clickedButt">Try it</button>
+        
     </div>
     
         <script src="clickcounter.js" type="text/javascript"></script>
